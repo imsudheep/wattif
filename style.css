@@ -1,0 +1,481 @@
+:root {
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-text-primary: #111111;
+    --color-text-secondary: #555555;
+    --spacing-container: 5vw;
+    --spacing-section: 120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-primary);
+    background-color: var(--color-white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-container);
+    width: 100%;
+}
+
+/* Header */
+.site-header {
+    padding: 30px 0;
+    position: relative;
+    background: var(--color-white);
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo {
+    display: block;
+}
+
+.logo-img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.site-nav a:hover {
+    opacity: 0.6;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: var(--color-text-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation */
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0 100px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.hero-headline h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-content {
+    padding-top: 10px;
+    max-width: 480px;
+    margin-left: auto;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: var(--color-text-primary);
+}
+
+.btn-newsletter {
+    display: inline-block;
+    width: 100%;
+    padding: 18px 30px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-newsletter:hover {
+    border-color: var(--color-black);
+    background: #f9f9f9;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 0 0 var(--spacing-section);
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.section-label h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.section-content {
+    max-width: 800px;
+}
+
+.lead-text {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    letter-spacing: -0.01em;
+}
+
+.body-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    max-width: 95%;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* Thinking Section */
+.thinking-section {
+    padding: 0 0 var(--spacing-section);
+}
+
+.section-title-center {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: var(--color-black);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 0 0 var(--spacing-section);
+}
+
+.newsletter-box {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 80px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.newsletter-content {
+    flex: 1;
+}
+
+.newsletter-content h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.newsletter-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #dddddd;
+}
+
+.newsletter-form-container {
+    flex: 1;
+    max-width: 450px;
+    padding-top: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-form label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #000;
+    outline: none;
+    border-radius: 0;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-headline h1 {
+        font-size: 4rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-label {
+        margin-bottom: 15px;
+    }
+
+    .section-content {
+        max-width: 100%;
+    }
+
+    .cards-grid {
+        gap: 20px;
+    }
+
+    .newsletter-box {
+        padding: 60px 40px;
+        gap: 40px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header .container {
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-white);
+        z-index: 105;
+        padding: 0;
+        margin: 0;
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .site-nav.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .site-nav a {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .hero-section {
+        padding: 80px 0 100px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hero-headline h1 {
+        font-size: 3.5rem;
+    }
+
+    .lead-text {
+        font-size: 1.5rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title-center {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .newsletter-form-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .newsletter-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-container: 20px;
+    }
+
+    .hero-headline h1 {
+        font-size: 2.75rem;
+        word-wrap: break-word;
+    }
+
+    .lead-text {
+        font-size: 1.25rem;
+    }
+
+    .body-text {
+        font-size: 0.95rem;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+    }
+
+    .btn-newsletter {
+        padding: 15px 20px;
+    }
+}
